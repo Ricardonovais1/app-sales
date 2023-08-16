@@ -3,7 +3,7 @@ services:
   db:
     image: postgres:latest
     volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+      - ./sales_db_3:/var/lib/postgresql/data
     environment:
       POSTGRES_USERNAME: postgres
       POSTGRES_PASSWORD: password
