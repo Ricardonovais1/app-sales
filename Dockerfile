@@ -1,8 +1,10 @@
 # syntax=docker/dockerfile:1
 FROM ruby:3.0.4
 
-RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 WORKDIR /app-sales
+
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+
 COPY Gemfile /app-sales/Gemfile
 COPY Gemfile.lock /app-sales/Gemfile.lock
 RUN bundle install
