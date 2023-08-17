@@ -1,0 +1,22 @@
+<div id="<%= dom_id consumidor %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Nome:</strong>
+    <%= consumidor.nome %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Telefone:</strong>
+    <%= consumidor.telefone %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Email:</strong>
+    <%= consumidor.email %>
+  </p>
+
+  <% if action_name != "show" %>
+    <%= link_to "Mostrar cliente", consumidor, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Editar cliente', edit_consumidor_path(consumidor), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>

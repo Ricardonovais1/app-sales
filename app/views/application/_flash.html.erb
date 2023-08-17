@@ -1,0 +1,14 @@
+<% if flash.any? %>
+  <div class="flash-outer" id="flashMessage" data-controller="removals"
+       data-action="animationend->removals#remove">
+    <% flash.each do |key, notice| %>
+      <div class="relative h-10 mb-5">
+        <div class="absolute right-0 top-1/2 transform -translate-y-1/2 z-20">
+          <div class="py-2 px-3 bg-green-50 text-green-500 font-medium rounded-lg inline-block max-w-xs">
+            <%= notice %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
